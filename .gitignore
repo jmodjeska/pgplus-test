@@ -57,3 +57,4 @@ build-iPhoneSimulator/
 
 ## Sensitive files:
 config/config.yaml
+data/output.log
