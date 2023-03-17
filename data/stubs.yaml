@@ -1,0 +1,152 @@
+who: |
+    ========================== This session is crap. ==========================
+    spec                -
+    Raindog             -
+    =============================== Page 1 of 1 ===============================
+
+spodlist: |
+    ============================ UberWorld Spodlist ===========================
+    219. Prea              0.00%  15 mins and 13 secs                     -----
+    220. cera              0.00%  14 mins and 56 secs                     -----
+    221. Azrael            0.00%  14 mins and 45 secs                     -----
+    222. Choppa            0.00%  14 mins and 25 secs                     -----
+    223. ylla              0.00%  14 mins and 19 secs                     -----
+    224. hermes            0.00%  14 mins and 9 secs                      -----
+    225. spec              2.88%  13 mins and 47 secs                     -----
+    226. TheGiant          0.00%  13 mins and 40 secs                     -----
+    227. Hira              0.00%  13 mins and 30 secs                     -----
+    228. jagex             0.00%  13 mins and 14 secs                     -----
+    229. Lavalamp          0.00%  12 mins and 27 secs                     -----
+    230. mizt              0.00%  12 mins and 20 secs                     -----
+    231. mrx               0.00%  11 mins and 33 secs                     -----
+    =============== Positions 1 to 13 (out of 303 residents) ===============
+
+home: |
+
+    This is spec's small and boggy patch of the UberWorld.
+    What can be said about it? Its small and erm ... its boggy.
+
+apol testing: |
+    You apologise {profusely|grovellingly|cowardly|quickly|extensively} for testing
+
+zzz: |
+    You {sleep|nap|kip|snore} {quietly|peacefully} in the corner
+
+mlink: |
+    =================== You have added the following link:  ===================
+
+    https://docs.ruby-lang.org/en/2.2.0/Net/Telnet.html
+
+    Short link to this URL is: http://uberworld.org/url/e319.
+    To share this link with the room, type 'link e319'.
+    To share on a multi or channel, use clink, rlink, etc.
+
+    ===========================================================================
+
+backup: |
+ -=> UberWorld daily backup occuring. Please wait a moment!
+ -=> UberWorld daily backup finished.
+
+file_manifest:
+    - '/home/uber/uberworld/backup/'
+    - '/home/uber/uberworld/bin/backup.code'
+    - '/home/uber/uberworld/bin/mail_new_pwd'
+    - '/home/uber/uberworld/doc/admin.shelp'
+    - '/home/uber/uberworld/doc/hcadmin.shelp'
+    - '/home/uber/uberworld/doc/index.shelp'
+    - '/home/uber/uberworld/doc/su.shelp'
+    - '/home/uber/uberworld/doc/edit_help'
+    - '/home/uber/uberworld/doc/talkers.help'
+    - '/home/uber/uberworld/doc/intercom.shelp'
+    - '/home/uber/uberworld/help_files/coding'
+    - '/home/uber/uberworld/help_files/configuration'
+    - '/home/uber/uberworld/help_files/Help_files.MANIFEST'
+    - '/home/uber/uberworld/help_files/licences'
+    - '/home/uber/uberworld/help_files/misc'
+    - '/home/uber/uberworld/help_files/PGPLUS.welcome'
+    - '/home/uber/uberworld/logs/links.log'
+    - '/home/uber/uberworld/logs/linkslog.txt'
+    - '/home/uber/uberworld/rooms/'
+    - '/home/uber/uberworld/rooms/data'
+    - '/home/uber/uberworld/rooms/keys'
+    - '/home/uber/uberworld/src/'
+    - '/home/uber/uberworld/files/banish'
+    - '/home/uber/uberworld/files/banish.msg'
+    - '/home/uber/uberworld/files/banned.msg'
+    - '/home/uber/uberworld/files/full.msg'
+    - '/home/uber/uberworld/files/nonew.msg'
+    - '/home/uber/uberworld/files/socials'
+    - '/home/uber/uberworld/files/hitells.msg'
+    - '/home/uber/uberworld/files/nores.msg'
+    - '/home/uber/uberworld/files/specialled.msg'
+    - '/home/uber/uberworld/files/intercom.dbase'
+    - '/home/uber/uberworld/files/notes'
+    - '/home/uber/uberworld/files/splat.msg'
+    - '/home/uber/uberworld/files/color_test.msg'
+    - '/home/uber/uberworld/files/intercom.rooms'
+    - '/home/uber/uberworld/files/nuke.msg'
+    - '/home/uber/uberworld/files/statistics'
+    - '/home/uber/uberworld/files/connect2.msg'
+    - '/home/uber/uberworld/files/items'
+    - '/home/uber/uberworld/files/players'
+    - '/home/uber/uberworld/files/sumotd.msg'
+    - '/home/uber/uberworld/files/connect3.msg'
+    - '/home/uber/uberworld/files/main.rooms'
+    - '/home/uber/uberworld/files/quit.msg'
+    - '/home/uber/uberworld/files/sumotd.msg.save'
+    - '/home/uber/uberworld/files/connect.msg'
+    - '/home/uber/uberworld/files/map.msg'
+    - '/home/uber/uberworld/files/quit_quick.msg'
+    - '/home/uber/uberworld/files/system.rooms'
+    - '/home/uber/uberworld/files/default.banish'
+    - '/home/uber/uberworld/files/motd.msg'
+    - '/home/uber/uberworld/files/robots'
+    - '/home/uber/uberworld/files/things.txt'
+    - '/home/uber/uberworld/files/defrag'
+    - '/home/uber/uberworld/files/newban.msg'
+    - '/home/uber/uberworld/files/rooms'
+    - '/home/uber/uberworld/files/version2.msg'
+    - '/home/uber/uberworld/files/describe.txt'
+    - '/home/uber/uberworld/files/newbie.msg'
+    - '/home/uber/uberworld/files/rude.msg'
+    - '/home/uber/uberworld/files/version3.msg'
+    - '/home/uber/uberworld/files/disclaimer.msg'
+    - '/home/uber/uberworld/files/newpage1.msg'
+    - '/home/uber/uberworld/files/sbconv.pl'
+    - '/home/uber/uberworld/files/version.msg'
+    - '/home/uber/uberworld/files/email_change.msg'
+    - '/home/uber/uberworld/files/newpage2.msg'
+    - '/home/uber/uberworld/files/sfx.txt'
+    - '/home/uber/uberworld/files/whois'
+    - '/home/uber/uberworld/files/email_timeout.msg'
+    - '/home/uber/uberworld/files/news'
+    - '/home/uber/uberworld/files/smartbot_database'
+    - '/home/uber/uberworld/files/email_welcome.msg'
+    - '/home/uber/uberworld/files/newversion.msg'
+    - '/home/uber/uberworld/files/sneeze.msg'
+    - '/home/uber/uberworld/soft/admin.msg'
+    - '/home/uber/uberworld/soft/deflog.msg'
+    - '/home/uber/uberworld/soft/pdefaults.msg'
+    - '/home/uber/uberworld/soft/rooms.msg'
+    - '/home/uber/uberworld/soft/shutdowns.msg'
+    - '/home/uber/uberworld/soft/config.msg'
+    - '/home/uber/uberworld/soft/frogs.msg'
+    - '/home/uber/uberworld/soft/plists.msg'
+    - '/home/uber/uberworld/soft/session.msg'
+    - '/home/uber/uberworld/website-new/css/'
+    - '/home/uber/uberworld/website-new/img'
+    - '/home/uber/uberworld/website-new/img/uber-ascii-bg.png'
+    - '/home/uber/uberworld/website-new/index.html'
+    - '/home/uber/uberworld/website-new/onnow.cgi'
+    - '/home/uber/uberworld/website-new/vendor'
+    - '/home/uber/uberworld/website-new/disclaimer.html'
+    - '/home/uber/uberworld/website-new/history.html'
+    - '/home/uber/uberworld/website-new/index.cgi'
+    - '/home/uber/uberworld/website-new/js'
+    - '/home/uber/uberworld/website-new/url/fixlog.pl'
+    - '/home/uber/uberworld/website-new/url/link.cgi'
+    - '/home/uber/uberworld/website-new/url/link_template.html'
+    - '/home/uber/uberworld/website-new/index.html'
+    - '/home/uber/uberworld/website-new/onnow.cgi'
+    - '/home/uber/uberworld/website-new/robots.txt'
+    - '/home/uber/uberworld/README.md'

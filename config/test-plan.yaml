@@ -1,0 +1,43 @@
+basic_commands:
+    - who:
+        cmd: 'who'
+        tests_to_run:
+            top_line_matches:
+            bottom_line_matches:
+            first_row_of_table_matches:
+    - spodlist:
+        cmd: 'spodlist'
+        tests_to_run:
+            top_line_matches:
+            bottom_line_contains: ['Positions (\d+) to (\d+)']
+    - home:
+        cmd: 'home'
+        tests_to_run:
+            line_matches: [1]
+    - zzz:
+        cmd: 'zzz'
+        tests_to_run:
+            social:
+    - apol:
+        cmd: 'apol testing'
+        tests_to_run:
+            social: ['testing']
+other_tests:
+admin_tests:
+    - backup_complete:
+    - file_manifest:
+        ssh: true
+    - backup_file_generated:
+        args: [
+                '/home/uber/uberworld/backup/backup01.tar.gz',
+                '/home/uber/uberworld/backup/backup01.tar'
+            ]
+        ssh: true
+    - mlink:
+        args: [
+                'https://docs.ruby-lang.org/en/2.2.0/Net/Telnet.html',
+                '/home/uber/uberworld/website-new/url/fixlog.pl',
+                '/home/uber/uberworld/logs/links.log'
+        ]
+        ssh: true
+development:

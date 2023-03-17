@@ -1,0 +1,22 @@
+profiles:
+    # A normal talker user you've created for testing
+    test:
+        ip: '0.0.0.0'
+        port: '2020'
+        username: 'test-user-name'
+        password: '123-fake-password'
+        prompt: '\$'
+
+    # Admin: a user you've granted the admin priv
+    test_admin:
+        ip: '0.0.0.0'
+        port: '2020'
+        username: 'admin-test-user-name'
+        password: '123-fake-password'
+        prompt: '\$'
+
+    # SSH user for local filesystem tests
+    ssh_user:
+        ssh_host: '0.0.0.0'
+        username: 'ssh-username'
+        pem_file: '/path/to/pemfile.pem'

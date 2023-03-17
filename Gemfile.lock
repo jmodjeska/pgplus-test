@@ -1,0 +1,17 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    net-ssh (7.1.0)
+    net-telnet (0.2.0)
+    optimist (3.0.1)
+
+PLATFORMS
+  arm64-darwin-22
+
+DEPENDENCIES
+  net-ssh
+  net-telnet
+  optimist (>= 3.0.0)
+
+BUNDLED WITH
+   2.4.6
