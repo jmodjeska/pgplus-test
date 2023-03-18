@@ -1,4 +1,5 @@
 require 'yaml'
+require 'numbers_in_words'
 
 STUBS = YAML.load_file('data/stubs.yaml')
 TEMP = 'pgplus-test_temp.txt'
@@ -157,7 +158,7 @@ module Tests
 
   def mlink(h, ssh, args)
     # Expected args:
-    # [0]: link to create;
+    # [0]: link to create
     # [1] path to logrotate or fixlog
     # [2] path to links.log
 
@@ -170,6 +171,10 @@ module Tests
     ssh.send("perl #{args[1]}")
     log_ln = ssh.send("wc -l #{args[2]}").split.first.to_i
     expects['reset links.log (3 lines)'] = ( log_ln == 3 ? true : log_ln )
+
+    # Verify HTTPS
+    out_ssl = clean(out.lines[4]).match(/URL is: (.*?)\/\//)[1].to_s.chop
+    expects['using https'] = ('https' == out_ssl.to_s)
 
     # Verify link ID consistency
     out_id = clean(out.lines[4]).match(/^(.*?)(\w\d+\.)$/)[2].to_s.chop
@@ -214,5 +219,30 @@ module Tests
       :results, expected == actual,
       "`true` for #{manifest.count} files", output_hash(diff)
     ]
+  end
+
+  def website_on_now(h, ssh, args)
+    # Expected args are locations of:
+    # [0]: people.count
+    # [1] onnow.cgi
+    # [2] index.cgi
+    expects = {}
+
+    # Actual number of people on the talker
+    expects['t_onnow'] = NumbersInWords.in_numbers(clean(h.send('where').
+      lines[0]).match(/There are (.*?) people/)[1].strip.to_s).to_s
+
+    # talker -> people.count
+    expects['people.count'] = clean(ssh.send("cat #{args[0]}")).to_s
+
+    # people.count -> onnow.cgi
+    expects['onnow.cgi'] = clean(ssh.send("perl #{args[1]}").lines[-1]).to_s
+
+    # people.count -> index.cgi
+    expects['index.cgi'] = ssh.send("perl #{args[2]}").
+      match(/<b>(\d+)<\/b> people/)[1].to_s
+
+    passfail = expects.values.all? { |x| x == expects['t_onnow'] }
+    return [:results, passfail, "all match", output_hash(expects)]
   end
 end

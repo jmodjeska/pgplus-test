@@ -34,6 +34,10 @@ basic_commands:
         cmd: 'help index'
         tests_to_run:
             all_lines_match:
+    - help_url:
+        cmd: 'help url'
+        tests_to_run:
+            all_lines_match:
     - commands_all:
         cmd: 'commands all'
         tests_to_run:
@@ -58,8 +62,15 @@ admin_tests:
     - mlink:
         args: [
                 'https://docs.ruby-lang.org/en/2.2.0/Net/Telnet.html',
-                '/home/uber/uberworld/website-new/url/fixlog.pl',
+                '/home/uber/website-new/url/fixlog.pl',
                 '/home/uber/uberworld/logs/links.log'
         ]
         ssh: true
+    - website_on_now:
+        ssh: true
+        args: [
+                '/home/uber/website-new/web_messaging/people.count',
+                '/home/uber/website-new/onnow.cgi',
+                '/home/uber/website-new/index.cgi'
+        ]
 development:

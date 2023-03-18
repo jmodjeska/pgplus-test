@@ -3,14 +3,16 @@ GEM
   specs:
     net-ssh (7.1.0)
     net-telnet (0.2.0)
+    numbers_in_words (1.0.1)
     optimist (3.0.1)
 
 PLATFORMS
   arm64-darwin-22
 
 DEPENDENCIES
-  net-ssh
+  net-ssh (>= 7.1.0)
   net-telnet
+  numbers_in_words
   optimist (>= 3.0.0)
 
 BUNDLED WITH
