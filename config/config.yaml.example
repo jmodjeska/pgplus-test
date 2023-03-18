@@ -5,7 +5,7 @@ profiles:
         port: '2020'
         username: 'test-user-name'
         password: '123-fake-password'
-        prompt: '\$'
+        prompt: 'PG\+\>'
 
     # Admin: a user you've granted the admin priv
     test_admin:
