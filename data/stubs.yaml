@@ -57,7 +57,7 @@ staff: |
 
 check_known_admin_profile: |
     Total login time    : 4036 days, 37 mins and 37 secs.
-    WWW homepage URL    : http://state.tc
+    WWW homepage URL    : https://modjeska.us
 
 backup: |
     -=> UberWorld daily backup occuring. Please wait a moment!
@@ -213,7 +213,6 @@ file_manifest:
     - '/home/uber/uberworld/files/connect3.msg'
     - '/home/uber/uberworld/files/main.rooms'
     - '/home/uber/uberworld/files/quit.msg'
-    - '/home/uber/uberworld/files/sumotd.msg.save'
     - '/home/uber/uberworld/files/connect.msg'
     - '/home/uber/uberworld/files/map.msg'
     - '/home/uber/uberworld/files/quit_quick.msg'
