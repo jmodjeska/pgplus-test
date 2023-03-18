@@ -13,7 +13,7 @@ default_profile = 'test'
 # CLI ARGUMENTS
 
 o = Optimist::options do
-  banner "\nSynopsis: ruby pgplus-test.rb [ -dh ]\n\n"
+  banner "\nSynopsis: ruby pgplus-test.rb\n\n"
   opt :dev_mode, "Only run tests specified in `development` section"
   opt :basic, "Only run test in the `basic_commands` section"
   opt :profile, "Specify a test profile for non-admin tests)",
