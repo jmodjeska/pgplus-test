@@ -86,6 +86,18 @@ module Tests
     return [:results, passfail, "all lines match", output_hash(diff)]
   end
 
+  def contains_all_stubs(cmd, out)
+    return check_stub(cmd)[1] unless check_stub(cmd)[0]
+    expects = {}
+    out.lines.each { |l| l = clean(l) }
+    STUBS[cmd].each do |t|
+      expects[t] = out.include?(t)
+    end
+    passfail = expects.all? { |k, v| v == true }
+    diff = expects.select { |k, v| k != true }
+    return [:results, passfail, "all stubs matched", output_hash(diff)]
+  end
+
   def social(cmd, out, str=nil)
     return check_stub(cmd)[1] unless check_stub(cmd)[0]
     expected = [STUBS[cmd].lines.first.strip]

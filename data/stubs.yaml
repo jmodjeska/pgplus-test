@@ -1,3 +1,5 @@
+# Command stubs (stub name exactly matches the command issued on the talker)
+
 who: |
     ========================== This session is crap. ==========================
     spec                -
@@ -54,10 +56,6 @@ staff: |
 
     There are 5 staff listed here
     ===========================================================================
-
-check_known_admin_profile: |
-    Total login time    : 4036 days, 37 mins and 37 secs.
-    WWW homepage URL    : https://modjeska.us
 
 backup: |
     -=> UberWorld daily backup occuring. Please wait a moment!
@@ -166,6 +164,17 @@ commands all: |
 
     There are 431 commands listed here available to you
     ===========================================================================
+
+version:
+    - Running UberWorld modifications v5.7.3.
+    - Shorter Links v0.2 (by Raindog) installed.
+
+# Other stubs (stub name matches the test name in test-plan.yaml)
+# These are grouped by section for convenience
+
+check_known_admin_profile: |
+    Total login time    : 4036 days, 37 mins and 37 secs.
+    WWW homepage URL    : https://modjeska.us
 
 file_manifest:
     - '/home/uber/uberworld/backup/'
