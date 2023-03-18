@@ -26,7 +26,7 @@ class ConnectTelnet
   end
 
   def new_client
-    File.truncate(LOG, 0)
+    File.truncate(LOG, 0) if File.exist?(LOG)
     begin
       client = Net::Telnet::new(
         "Host" => @ip,
@@ -39,6 +39,9 @@ class ConnectTelnet
       )
     rescue Errno::EHOSTUNREACH, Net::OpenTimeout => e
       abort "Can't reach #{@ip} at port #{@port}\n".failure
+    rescue Errno::ECONNREFUSED => e
+      abort "Connection refused to #{@ip} at port #{@port}. "\
+        "Is the talker running?\n".failure
     end
 
     # Validate connection
@@ -53,8 +56,11 @@ class ConnectTelnet
       sleep 1
       if system("grep 'try again!' #{LOG} > /dev/null") then
         puts "Talker login failed (password) for #{@username}".failure
-      elsif system("grep 'Last logged in' #{LOG} > /dev/null") ||
-        system("grep 'Restoring your connection' #{LOG} > /dev/null")
+      elsif system("grep 'already logged on here' #{LOG} > /dev/null")
+        noisy("Talker login successful for #{@username} "\
+          "(NOTE: user was already logged in)".login)
+        client.puts('')
+      elsif system("grep 'Last logged in' #{LOG} > /dev/null")
         noisy("Talker login successful for #{@username}".login)
       else
         puts "Talker login failed for #{@username.bold} (see #{LOG})".failure

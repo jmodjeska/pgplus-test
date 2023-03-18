@@ -43,9 +43,115 @@ mlink: |
 
     ===========================================================================
 
+staff: |
+    ============================= UberWorld Staff =============================
+
+    (Staff hilighted are on UberWorld but may not be active)
+
+    UberHC             - Jodrell, Raindog, Silver.
+    UberAdmin          - goat, RidOfYou.
+    UberAcolyte        -
+
+    There are 5 staff listed here
+    ===========================================================================
+
+check_known_admin_profile: |
+    Total login time    : 4036 days, 37 mins and 37 secs.
+    WWW homepage URL    : http://state.tc
+
 backup: |
- -=> UberWorld daily backup occuring. Please wait a moment!
- -=> UberWorld daily backup finished.
+    -=> UberWorld daily backup occuring. Please wait a moment!
+    -=> UberWorld daily backup finished.
+
+help: |
+    ============================== UberWorld help =============================
+
+    UberWorld Online Help
+    ---------------------
+
+    The easiest way to use help is to start with "help index" and then go
+    through all the pages - "help 1", "help 2" and so on.
+
+    If you'd like the basics then "help basic" is the best place to find the
+    20 commands you really should know.
+
+    Help can also be found on various commands and specific topics. Simply
+    type "help <command or topic>" for information. Alternatively you can
+    enter any command followed by "/?" or "-h" (ie. "pinfo -h") and the
+    relevant help will be shown.
+
+    These helpfiles were written by Silver, Foxus and Ratarsed.
+
+    ===========================================================================
+
+help index: |
+    ============================== UberWorld help =============================
+
+    General helpfiles can be found on the following topics. For more specific
+    instructions you can do "help <command name>".
+
+    0   - General help.                   10  - More room commands.
+    1   - Communicating with others.      11  - Using the editor.
+    2   - Getting information.            12  - Using the pager.
+    3   - Customising your character.     13  - Miscellaneous commands.
+    4   - Movement around rooms.          14  - The wierd world of pipes.
+    5   - Lists and how to use them.      15  - Channels explained.
+    6   - Using the newsgroups.           16  - Colour on UberWorld.
+    7   - Using the internal mail.        17  - Aliases, creating and using.
+    8   - Checking commands.
+    9   - Room commands.
+
+    ===========================================================================
+
+commands all: |
+    ========================= Complete set of commands ========================
+
+    ' " ;; ; : > . <; ,; < , = !;; !; !~ !+ !) ! ? + - [+ [& [~ [) [; ] [
+    ) ( ~ * & } { accept accuse afk age alias announce award bar bday
+    beep beg birthday bj blame blank_alias blank_gags blank_items
+    blank_list block blockchans blockdesc blockfmail blockfriends
+    blockgames blockitems blocklist blocklogins blockmsg blockmulti
+    blocktells book boot bop bounce bremind bug buy cancel caution cd ce
+    ch_hi check check_morph church clist cls cmess color colourise
+    commands comment comments congrat connect_room converse cprompt
+    cremind cs ct cu cw dsc_hi debate define deflogon deflogoff defrecon
+    delete_all_aliases description divider dmess drag drink drop
+    earmuffs eat echo ef efo email emergency emote end entermsg ereply
+    examine exitmsg exits f favourite find finger fix_colour flirt flist
+    friend friended friendblock fuck fwho gag game_hi gender ghome give
+    go grab grabable grabme gwho help helpme hide history hitells home
+    hometown homeview hurtle i iacga icq id idea idle idlelist idlemsg
+    idle_multi ie ignite ignore ignoremsg il inform insert intercom
+    inventory invite invites irl_name is it item iu iw iwho iwinh ix
+    jetlag join join_chan key kill_multi l last ld le leave leave_chan
+    lend libcopy libexam liblist linewrap list list_builders list_chans
+    list_couples list_creators list_icq list_obj list_objects list_min
+    list_multis list_new_items list_spods list_su list_url logoffmsg
+    logon_fwho logonmsg lock look ls lsa lsb lsc lsf lsk lsm lso lsp lsq
+    lss lsu lsw lsz lt lu lw mail mailblock mailforward main man map
+    mball messages mines mindscape mindseye mlink morph motd mquit
+    muffle mysite news nobachelor nobeep noblink noeprefix nofriend
+    nogift noisy nopager noprs noprefix no_propose oreply ownpriv
+    password pemote pf pfo phone_number pickup ping pinfo place plan
+    play play_mode prefix premote preply prompt propose privs prefer prs
+    pstats purge_list push pyemote quiet quit quit_in qwho ranks rd re
+    recap recho recon reject remind remote repeat reply reportto
+    request_social res_count res_me results review rf rfo rlist rm_list
+    rm_multi room rsing rt rtf rtfo rthink same save say screenlock
+    see_gfx seeecho seesess seetitle sell send_icq session set set_dot
+    set_morph sf sfo shareroom shout show showexits silly_stats sing
+    singblock sl slist slot_panels slots smess smoke spit spray special
+    spod_comp spodlist spods sreply statcommands staff steal userdel
+    swho syscolor take talkmode taunt tell term_lines testcard tf tfo
+    think threaten throw tlist time timeprompt title toggle trans treply
+    ttt twho uberbar undefine ungag unidlemsg uptime url use version
+    visit visual visual_lines vote w wake wear whack where whisper who
+    whoami whois wield with wordwrap work_mode worldtime x xi xs xx
+    yecho yell yemote yf yfo yreply ysing ythink zap zc zd ze zs zt zu
+    zw
+
+    There are 431 commands listed here available to you
+    ===========================================================================
 
 file_manifest:
     - '/home/uber/uberworld/backup/'

@@ -22,7 +22,29 @@ basic_commands:
         cmd: 'apol testing'
         tests_to_run:
             social: ['testing']
+    - staff:
+        cmd: 'staff'
+        tests_to_run:
+            all_lines_match:
+    - help:
+        cmd: 'help'
+        tests_to_run:
+            all_lines_match:
+    - help_index:
+        cmd: 'help index'
+        tests_to_run:
+            all_lines_match:
+    - commands_all:
+        cmd: 'commands all'
+        tests_to_run:
+            all_lines_match:
+    - local_channel:
+        cmd: 'lu test'
+        tests_to_run:
+            bottom_line_contains: ["-=UberLocal=- spec says 'test'"]
 other_tests:
+    - check_known_admin_profile:
+        args: ['raindog']
 admin_tests:
     - backup_complete:
     - file_manifest:

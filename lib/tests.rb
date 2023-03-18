@@ -5,7 +5,7 @@ TEMP = 'pgplus-test_temp.txt'
 
 module Tests
 
-  def clean(i)
+  private def clean(i)
     # Remove ANSI color codes and newlines from a string
     # (recommended for all 'actual' result comparisons)
     o = i.gsub(/\e\[([;\d]+)?m/, '').strip
@@ -13,12 +13,21 @@ module Tests
     return o
   end
 
-  def check_stub(cmd)
+  private def check_stub(cmd)
     if STUBS[cmd].nil? then
       message = "A stub for `#{cmd}` seems to be missing"
       return [false, [:results, false, 'stub', message]]
     else return [true]
     end
+  end
+
+  def toggle_pager(h, desired_state)
+    2.times do
+      o = clean(h.send('nopager')).lines[0]
+      state = o.match?("You will not") ? 'unpaged' : 'paged'
+      return true if state == desired_state
+    end
+    return false
   end
 
   # Comparison tests return arrays as follows
@@ -65,6 +74,17 @@ module Tests
     return [:results, m.match?(actual), expected, actual]
   end
 
+  def all_lines_match(cmd, out)
+    return check_stub(cmd)[1] unless check_stub(cmd)[0]
+    expects = {}
+    STUBS[cmd].lines[0..-1].each_with_index do |l, i|
+      expects[clean(l)] = clean(out.lines[i])
+    end
+    passfail = expects.all? { |k, v| k == v }
+    diff = expects.select { |k, v| k != v }
+    return [:results, passfail, "all lines match", output_hash(diff)]
+  end
+
   def social(cmd, out, str=nil)
     return check_stub(cmd)[1] unless check_stub(cmd)[0]
     expected = [STUBS[cmd].lines.first.strip]
@@ -84,6 +104,38 @@ module Tests
       v.times { expected.shift }
     end
     return [:results, expected.include?(actual), expected, actual]
+  end
+
+  # OTHER TESTS (NON-ADMIN)
+
+  def check_known_admin_profile(h, args)
+    return check_stub('check_known_admin_profile')[1] unless
+      check_stub('check_known_admin_profile')[0]
+    toggle_pager(h, "unpaged")
+    stub = STUBS['check_known_admin_profile']
+    out = clean(h.send("f #{args[0]}"))
+    expects = {}
+
+    # Login time
+    ltime_stub = stub.lines[0].match(/^.*?(\d+).*?days/)[1].to_i
+    ltime_out = out.lines[5].match(/^.*?(\d+).*?days/)[1].to_i
+    if ltime_out >= ltime_stub then
+      expects['login time >= stub'] = true
+    else
+      a = "stub: #{ltime_stub}; actual: #{ltime_out}"
+      expects['login time >= stub'] = a
+    end
+
+    # WWW homepage
+    if clean(stub.lines[1]) == clean(out.lines[12])
+      expects['www homepage matches'] = true
+    else
+      expects['www homepage matches'] =
+        "\nexpected: " + clean(stub.lines[1]) +
+        "\nactual:   " + clean(out.lines[12])
+    end
+    passfail = expects.values.all? { |x| x == true }
+    return [:results, passfail, "all true", output_hash(expects)]
   end
 
   # ADMIN & FILESYSTEM TESTS
@@ -110,6 +162,7 @@ module Tests
     # [2] path to links.log
 
     return check_stub('mlink')[1] unless check_stub('mlink')[0]
+    toggle_pager(h, "unpaged")
     stub, out, expects = STUBS['mlink'], clean(h.send("mlink #{args[0]}")), {}
     expects['link matches'] = ( clean(stub.lines[2]) == clean(out.lines[2]) )
 

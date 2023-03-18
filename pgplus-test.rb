@@ -90,6 +90,7 @@ begin
   # Section: Basic Command Tests
   unless dev_mode
     h = ConnectTelnet.new('basic commands', profile)
+    toggle_pager(h, "unpaged")
     PLAN['basic_commands'].each do |test_definition|
       test_name = test_definition.first[0]
       cmd = test_definition.dig(test_name, 'cmd')
@@ -122,10 +123,9 @@ begin
 
 rescue Net::ReadTimeout => e
   puts "\n-=> Timed out waiting for talker response.".bold.red
-  puts "HINT: You might end up here if the test character wasn't properly "\
-      "logged out (try again) or if the `prompt` config doesn't exactly "\
-       "match the test user's talker prompt, including properly escaped "\
-       "characters for regex compatibility. See "\
+  puts "HINT: You might end up here if thethe `prompt` config doesn't "\
+       "exactly match the test user's talker prompt, including properly "\
+       "escaped characters for regex compatibility. See "\
        "https://github.com/jmodjeska/pgplus-test for examples.\n".wrap
 end
 
