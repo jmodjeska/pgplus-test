@@ -103,6 +103,20 @@ help index: |
 
     ===========================================================================
 
+help url: |
+    ============================== UberWorld help =============================
+
+    Command  : url [url]
+
+    Details  : Sets the URL of your webpage, as displayed in your
+                eXamine and Finger files.
+
+    Notes    : * If no URL is specified, then your url is blanked.
+
+    See also : lsw
+
+    ===========================================================================
+
 commands all: |
     ========================= Complete set of commands ========================
 
@@ -141,10 +155,10 @@ commands all: |
     see_gfx seeecho seesess seetitle sell send_icq session set set_dot
     set_morph sf sfo shareroom shout show showexits silly_stats sing
     singblock sl slist slot_panels slots smess smoke spit spray special
-    spod_comp spodlist spods sreply statcommands staff steal userdel
-    swho syscolor take talkmode taunt tell term_lines testcard tf tfo
-    think threaten throw tlist time timeprompt title toggle trans treply
-    ttt twho uberbar undefine ungag unidlemsg uptime url use version
+    spod_comp spodlist spods sreply statcommands staff steal swho
+    syscolor take talkmode taunt tell term_lines testcard tf tfo think
+    threaten throw tlist time timeprompt title toggle trans treply ttt
+    twho uberbar undefine ungag unidlemsg uptime url use userdel version
     visit visual visual_lines vote w wake wear whack where whisper who
     whoami whois wield with wordwrap work_mode worldtime x xi xs xx
     yecho yell yemote yf yfo yreply ysing ythink zap zc zd ze zs zt zu
@@ -239,20 +253,20 @@ file_manifest:
     - '/home/uber/uberworld/soft/frogs.msg'
     - '/home/uber/uberworld/soft/plists.msg'
     - '/home/uber/uberworld/soft/session.msg'
-    - '/home/uber/uberworld/website-new/css/'
-    - '/home/uber/uberworld/website-new/img'
-    - '/home/uber/uberworld/website-new/img/uber-ascii-bg.png'
-    - '/home/uber/uberworld/website-new/index.html'
-    - '/home/uber/uberworld/website-new/onnow.cgi'
-    - '/home/uber/uberworld/website-new/vendor'
-    - '/home/uber/uberworld/website-new/disclaimer.html'
-    - '/home/uber/uberworld/website-new/history.html'
-    - '/home/uber/uberworld/website-new/index.cgi'
-    - '/home/uber/uberworld/website-new/js'
-    - '/home/uber/uberworld/website-new/url/fixlog.pl'
-    - '/home/uber/uberworld/website-new/url/link.cgi'
-    - '/home/uber/uberworld/website-new/url/link_template.html'
-    - '/home/uber/uberworld/website-new/index.html'
-    - '/home/uber/uberworld/website-new/onnow.cgi'
-    - '/home/uber/uberworld/website-new/robots.txt'
+    - '/home/uber/website-new/css/'
+    - '/home/uber/website-new/img'
+    - '/home/uber/website-new/img/uber-ascii-bg.png'
+    - '/home/uber/website-new/index.html'
+    - '/home/uber/website-new/onnow.cgi'
+    - '/home/uber/website-new/vendor'
+    - '/home/uber/website-new/disclaimer.html'
+    - '/home/uber/website-new/history.html'
+    - '/home/uber/website-new/index.cgi'
+    - '/home/uber/website-new/js'
+    - '/home/uber/website-new/url/fixlog.pl'
+    - '/home/uber/website-new/url/link.cgi'
+    - '/home/uber/website-new/url/link_template.html'
+    - '/home/uber/website-new/index.html'
+    - '/home/uber/website-new/onnow.cgi'
+    - '/home/uber/website-new/robots.txt'
     - '/home/uber/uberworld/README.md'

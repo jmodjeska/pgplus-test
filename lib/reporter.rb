@@ -12,7 +12,7 @@ class Report
 
   def parse
     stack = ''
-    @cmd.concat ': ' unless @cmd.nil?
+    @cmd = "#{@cmd.bold}: " unless @cmd.nil?
     # Properly-formatted test results
     if @type == :results && @test_results[0] == :results
       test_passed = @test_results[1]
