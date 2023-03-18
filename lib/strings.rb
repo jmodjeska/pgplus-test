@@ -24,7 +24,8 @@ class String
     self.prepend(pad)
     chars, stack, i = self.split(""), [], 0
     chars.each do |c|
-      (c = "\n#{pad}"; i = 0) if (c == "\n") || (i >= 60 && c == " ")
+      twidth = 76 - padding
+      (c = "\n#{pad}"; i = 0) if (c == "\n") || (i >= twidth && c == " ")
       stack << c; i += 1
     end
     return stack.join("").to_s

@@ -82,7 +82,7 @@ end
 ##################################################
 # RUNTIME
 
-starttime = Time.new.inspect
+starttime = sprintf("%23s", Time.new.inspect)
 puts timeline(:start, starttime)
 @sk = Scorekeeper.new
 

@@ -1,4 +1,8 @@
 basic_commands:
+    - version_match:
+        cmd: 'version'
+        tests_to_run:
+            contains_all_stubs:
     - who:
         cmd: 'who'
         tests_to_run:
