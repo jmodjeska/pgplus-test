@@ -19,7 +19,7 @@ PG+ Test is private; it . . .
 
     $ ruby pgplus-test.rb
     
-    --------------------------------------------------------------------------------
+    ------------------------------------------- [ 2023-03-25 21:17:40.251332 -0700 ]
 
     -=> Testing section: basic commands <=-
         ✅ Login successful for test_user
@@ -27,20 +27,19 @@ PG+ Test is private; it . . .
         ✅ who: first_row_of_table_matches
         ✅ spodlist: bottom_line_contains
         ✅ Logout successful for test_user
-    -=> Section complete: basic commands <=-
 
     -=> Testing section: other tests <=-
         ✅ Login successful for test_user
         ❌ example_test: custom failed test output
         ✅ example_test: custom passed test output
         ✅ Logout successful for test_user
-    -=> Section complete: other tests <=-
 
     -=> Testing section: admin tests <=-
         ✅ Login successful for admin_test_user
         ✅ backup_operation: process complete 
         ✅ Logout successful for admin_test_user
-    -=> Section complete: admin tests <=-
+
+    -------------- [  18 pass   0 fail   0 err   ] - [ completed in 0009.0266 secs ]
 
 ## Usage
 
@@ -137,20 +136,20 @@ Say you've added a new command to your talker called `cocktail <drink>` that pro
     ````
     cocktail old fashioned: |
 
-    ==================== Cocktail recipe for: Old Fashioned ===================
+        ==================== Cocktail recipe for: Old Fashioned ===================
 
-    Old Fashioned: 
-    A pre-dinner drink with a boozy taste.
+        Old Fashioned: 
+        A pre-dinner drink with a boozy taste.
 
-    Ingredients:
+        Ingredients:
 
-    - Rye Whiskey: 6 cl
-    - Simple syrup: 1 cl
-    - Angostura bitters: 2 dashes
+        - Rye Whiskey: 6 cl
+        - Simple syrup: 1 cl
+        - Angostura bitters: 2 dashes
 
-    Preparation: Stirred.
+        Preparation: Stirred.
 
-    ===========================================================================
+        ===========================================================================
     ````
     
 3. **Update the test plan.** In the `basic_commands` section of `config/test-plan.yaml`, add a new section for your `cocktail` command. Tests in this section are run in order, so drop it wherever in the plan you want it. Since the output of `cocktail` is not variable, the easiest test to run is `all_lines_match`. Note that I called this test `cocktail_old_fashioned` to make it easy to reason about, but for basic commands, you can name the test whatever you want.
