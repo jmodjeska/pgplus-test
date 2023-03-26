@@ -26,12 +26,24 @@ basic_commands:
         cmd: 'apol testing'
         tests_to_run:
             social: ['testing']
+    - cocktail:
+        cmd: 'cocktail buttermilk maple gin flip'
+        tests_to_run:
+            all_lines_match:
+    - cocktail_list:
+        cmd: 'cocktail list'
+        tests_to_run:
+            all_lines_match:
     - staff:
         cmd: 'staff'
         tests_to_run:
             all_lines_match:
     - help:
         cmd: 'help'
+        tests_to_run:
+            all_lines_match:
+    - help_cocktail:
+        cmd: 'help cocktail'
         tests_to_run:
             all_lines_match:
     - help_index:

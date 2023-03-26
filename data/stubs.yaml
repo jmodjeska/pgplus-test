@@ -34,6 +34,58 @@ apol testing: |
 zzz: |
     You {sleep|nap|kip|snore} {quietly|peacefully} in the corner
 
+cocktail buttermilk maple gin flip: |
+    ============== Cocktail recipe for: Buttermilk maple gin flip =============
+
+    Buttermilk maple gin flip:
+    An after dinner drink with a mysterious taste.
+
+    Ingredients:
+
+    - Gin: 6 cl
+    - Buttermilk: 3 cl
+    - Egg: 1 whole
+    - Maple syrup: 1 bar spoon
+
+    Preparation: Shaken.
+
+    ===========================================================================
+
+cocktail list: |
+    ========================= Available drink recipes =========================
+
+    americano, daiquiri, hemingway daiquiri, whiskey sour,
+    napa vally sour, grand marnier sour, bacardi, dry martini,
+    manhattan, negroni, boulevardier, old pal, old fashioned,
+    blood and sand, toronto, cynar toronto, cynartown, bitter mimosa,
+    black velvet, bellini, kir royal, champagne cocktail,
+    french 75, boulevard, angel face, aviation, bella luna,
+    last word, white lady, between the sheets, cosmopolitan,
+    casino, clover club, mary pickford, monkey gland, paradise,
+    screwdriver, salty dog, sidecar, tuxedo, blinker, gin fizz,
+    john collins, tom collins, porto flip, buttermilk maple gin flip,
+    rusty nail, sazerac, french connection, godfather, godmother,
+    vesper, harvey wallbanger, italian stinger, army and navy,
+    bees knees, bijou, gimlet, martinez, b and b, milk and honey,
+    derby cocktail, gypsy queen, bobby burns, vieux carre,
+    chrysanthemum, shaken drake, adriatique, twentieth century,
+    irish coffee, margarita, enzoni
+
+    There are 72 recipes available.
+
+    ===========================================================================
+
+help cocktail: |
+    ============================== UberWorld help =============================
+
+    Command  : cocktail <drink>
+
+    Details  : Request a recipe for the tasty beverage of your choice.
+
+    Notes    : * Try `cocktail list` if you want to browse the recipe list.
+
+    ===========================================================================
+
 mlink: |
     =================== You have added the following link:  ===================
 
@@ -124,45 +176,45 @@ commands all: |
     blank_list block blockchans blockdesc blockfmail blockfriends
     blockgames blockitems blocklist blocklogins blockmsg blockmulti
     blocktells book boot bop bounce bremind bug buy cancel caution cd ce
-    ch_hi check check_morph church clist cls cmess color colourise
-    commands comment comments congrat connect_room converse cprompt
-    cremind cs ct cu cw dsc_hi debate define deflogon deflogoff defrecon
-    delete_all_aliases description divider dmess drag drink drop
-    earmuffs eat echo ef efo email emergency emote end entermsg ereply
-    examine exitmsg exits f favourite find finger fix_colour flirt flist
-    friend friended friendblock fuck fwho gag game_hi gender ghome give
-    go grab grabable grabme gwho help helpme hide history hitells home
-    hometown homeview hurtle i iacga icq id idea idle idlelist idlemsg
-    idle_multi ie ignite ignore ignoremsg il inform insert intercom
-    inventory invite invites irl_name is it item iu iw iwho iwinh ix
-    jetlag join join_chan key kill_multi l last ld le leave leave_chan
-    lend libcopy libexam liblist linewrap list list_builders list_chans
-    list_couples list_creators list_icq list_obj list_objects list_min
-    list_multis list_new_items list_spods list_su list_url logoffmsg
-    logon_fwho logonmsg lock look ls lsa lsb lsc lsf lsk lsm lso lsp lsq
-    lss lsu lsw lsz lt lu lw mail mailblock mailforward main man map
-    mball messages mines mindscape mindseye mlink morph motd mquit
-    muffle mysite news nobachelor nobeep noblink noeprefix nofriend
-    nogift noisy nopager noprs noprefix no_propose oreply ownpriv
-    password pemote pf pfo phone_number pickup ping pinfo place plan
-    play play_mode prefix premote preply prompt propose privs prefer prs
-    pstats purge_list push pyemote quiet quit quit_in qwho ranks rd re
-    recap recho recon reject remind remote repeat reply reportto
-    request_social res_count res_me results review rf rfo rlist rm_list
-    rm_multi room rsing rt rtf rtfo rthink same save say screenlock
-    see_gfx seeecho seesess seetitle sell send_icq session set set_dot
-    set_morph sf sfo shareroom shout show showexits silly_stats sing
-    singblock sl slist slot_panels slots smess smoke spit spray special
-    spod_comp spodlist spods sreply statcommands staff steal swho
-    syscolor take talkmode taunt tell term_lines testcard tf tfo think
-    threaten throw tlist time timeprompt title toggle trans treply ttt
-    twho uberbar undefine ungag unidlemsg uptime url use userdel version
-    visit visual visual_lines vote w wake wear whack where whisper who
-    whoami whois wield with wordwrap work_mode worldtime x xi xs xx
-    yecho yell yemote yf yfo yreply ysing ythink zap zc zd ze zs zt zu
-    zw
+    ch_hi check check_morph church clist cls cmess cocktail color
+    colourise commands comment comments congrat connect_room converse
+    cprompt cremind cs ct cu cw dsc_hi debate define deflogon deflogoff
+    defrecon delete_all_aliases description divider dmess drag drink
+    drop earmuffs eat echo ef efo email emergency emote end entermsg
+    ereply examine exitmsg exits f favourite find finger fix_colour
+    flirt flist friend friended friendblock fuck fwho gag game_hi gender
+    ghome give go grab grabable grabme gwho help helpme hide history
+    hitells home hometown homeview hurtle i iacga icq id idea idle
+    idlelist idlemsg idle_multi ie ignite ignore ignoremsg il inform
+    insert intercom inventory invite invites irl_name is it item iu iw
+    iwho iwinh ix jetlag join join_chan key kill_multi l last ld le
+    leave leave_chan lend libcopy libexam liblist linewrap list
+    list_builders list_chans list_couples list_creators list_icq
+    list_obj list_objects list_min list_multis list_new_items list_spods
+    list_su list_url logoffmsg logon_fwho logonmsg lock look ls lsa lsb
+    lsc lsf lsk lsm lso lsp lsq lss lsu lsw lsz lt lu lw mail mailblock
+    mailforward main man map mball messages mines mindscape mindseye
+    mlink morph motd mquit muffle mysite news nobachelor nobeep noblink
+    noeprefix nofriend nogift noisy nopager noprs noprefix no_propose
+    oreply ownpriv password pemote pf pfo phone_number pickup ping pinfo
+    place plan play play_mode prefix premote preply prompt propose privs
+    prefer prs pstats purge_list push pyemote quiet quit quit_in qwho
+    ranks rd re recap recho recon reject remind remote repeat reply
+    reportto request_social res_count res_me results review rf rfo rlist
+    rm_list rm_multi room rsing rt rtf rtfo rthink same save say
+    screenlock see_gfx seeecho seesess seetitle sell send_icq session
+    set set_dot set_morph sf sfo shareroom shout show showexits
+    silly_stats sing singblock sl slist slot_panels slots smess smoke
+    spit spray special spod_comp spodlist spods sreply statcommands
+    staff steal swho syscolor take talkmode taunt tell term_lines
+    testcard tf tfo think threaten throw tlist time timeprompt title
+    toggle trans treply ttt twho uberbar undefine ungag unidlemsg uptime
+    url use userdel version visit visual visual_lines vote w wake wear
+    whack where whisper who whoami whois wield with wordwrap work_mode
+    worldtime x xi xs xx yecho yell yemote yf yfo yreply ysing ythink
+    zap zc zd ze zs zt zu zw
 
-    There are 431 commands listed here available to you
+    There are 432 commands listed here available to you
     ===========================================================================
 
 version:
