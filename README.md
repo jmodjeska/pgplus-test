@@ -111,57 +111,57 @@ Basic command tests (in the `basic_commands` section of the test plan) don't req
 
 ### Example: add a test for a new basic command
 
-Say you've added a new command to your talker called `cocktail <drink>` that provides the recipe for a given drink (can you guess who is at a bar right now?) and you want to add a test for it. 
+Say you've added a new command to your talker called `cocktail <drink>` that provides the recipe for a given drink and you want to add a test for it (side note: I totally made up the idea for this command while I was writing this README, then decided it was a great idea, so when you're done reading this, check out [PG+ Cocktail Recipe](https://github.com/jmodjeska/pgplus-cocktail)!).
 
-1. **Get a stub.** Go to your talker and capture some example output. Maybe you're in the mood for a paper plane, so you capture the output for `cocktail paper plane`, which looks like this:
+1. **Get a stub.** Go to your talker and capture some example output. Maybe you're in the mood for an old fashioned, so you capture the output for `cocktail old fashioned`, which looks like this:
 
     ````
-    ========================== Recipe for Paper Plane =========================
+    ==================== Cocktail recipe for: Old Fashioned ===================
 
-    Ingredients
+    Old Fashioned: 
+    A pre-dinner drink with a boozy taste.
 
-    * 3/4 ounce bourbon
-    * 3/4 ounce Aperol
-    * 3/4 ounce Amaro Nonino Quintessentia
-    * 3/4 ounce lemon juice, freshly squeezed
+    Ingredients:
 
-    Steps
+    - Rye Whiskey: 6 cl
+    - Simple syrup: 1 cl
+    - Angostura bitters: 2 dashes
 
-    1. Add the bourbon, Aperol, Amaro Nonino and lemon juice into a shaker
-       with ice and shake until well-chilled.
-    2. Strain into a coupe glass.
+    Preparation: Stirred.
 
     ===========================================================================
     ````
+    
  2. **Add the stub to `data/stubs.yaml`.** The order of stubs in the stubs file doesn't matter, but I recommend dropping it in the top section, which is `# Command stubs (stub name exactly matches the command issued on the talker)` to keep things easy to reason about. The stub will look like this, with a YAML block string directive at the top and four spaces of indentation:
 
     ````
-    cocktail paper plane: |
-        ========================== Recipe for Paper Plane =========================
+    cocktail old fashioned: |
 
-        Ingredients
+    ==================== Cocktail recipe for: Old Fashioned ===================
 
-        * 3/4 ounce bourbon
-        * 3/4 ounce Aperol
-        * 3/4 ounce Amaro Nonino Quintessentia
-        * 3/4 ounce lemon juice, freshly squeezed
+    Old Fashioned: 
+    A pre-dinner drink with a boozy taste.
 
-        Steps
+    Ingredients:
 
-        1. Add the bourbon, Aperol, Amaro Nonino and lemon juice into a shaker
-           with ice and shake until well-chilled.
-        2. Strain into a coupe glass.
+    - Rye Whiskey: 6 cl
+    - Simple syrup: 1 cl
+    - Angostura bitters: 2 dashes
 
-        ===========================================================================
+    Preparation: Stirred.
+
+    ===========================================================================
     ````
-3. **Update the test plan.** In the `basic_commands` section of `config/test-plan.yaml`, add a new section for your `cocktail` command. Tests in this section are run in order, so drop it wherever in the plan you want it. Since the output of `cocktail` is not variable, the easiest test to run is `all_lines_match`. Note that I called this test `cocktail_paper_plane` to make it easy to reason about, but for basic commands, you can name the test whatever you want.
+    
+3. **Update the test plan.** In the `basic_commands` section of `config/test-plan.yaml`, add a new section for your `cocktail` command. Tests in this section are run in order, so drop it wherever in the plan you want it. Since the output of `cocktail` is not variable, the easiest test to run is `all_lines_match`. Note that I called this test `cocktail_old_fashioned` to make it easy to reason about, but for basic commands, you can name the test whatever you want.
  
     ````
-    - cocktail_paper_plane:
-        cmd: 'cocktail paper plane'
+    - cocktail_old_fashioned:
+        cmd: 'cocktail old fashioned'
         tests_to_run:
             all_lines_match:
     ````
+
 4. That's it! Save your files and you're ready to execute your new test as part of your test plan. You can run PG+ Test with the `-b` flag to only execute the `basic_commands` section of the plan. This section should run pretty quickly.
 
 For commands with variable output, consider using some of the other basic command tests such as `bottom_line_contains`.
