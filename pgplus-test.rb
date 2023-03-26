@@ -123,7 +123,7 @@ begin
 
 rescue Net::ReadTimeout => e
   puts "\n-=> Timed out waiting for talker response.".bold.red
-  puts "HINT: You might end up here if thethe `prompt` config doesn't "\
+  puts "HINT: You might end up here if the `prompt` config doesn't "\
        "exactly match the test user's talker prompt, including properly "\
        "escaped characters for regex compatibility. See "\
        "https://github.com/jmodjeska/pgplus-test for examples.\n".wrap
