@@ -199,4 +199,5 @@ Who knows how much time I'll have for this project, but some nice-to-have future
 4. **Talker + test deployment pipeline**. I mean, why not go totally bananas, right?
 
 ## You might also like
-[Short Link Generator for PG+ Talkers](https://github.com/jmodjeska/pgplus_shortlink)
+* [Short Link Generator for PG+ Talkers](https://github.com/jmodjeska/pgplus_shortlink)
+* [PG+ Cocktail Recipe](https://github.com/jmodjeska/pgplus-cocktail)
