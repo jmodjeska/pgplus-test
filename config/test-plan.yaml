@@ -66,6 +66,7 @@ other_tests:
     - check_known_admin_profile:
         args: ['raindog']
 admin_tests:
+    - lsu:
     - backup_complete:
     - file_manifest:
         ssh: true
