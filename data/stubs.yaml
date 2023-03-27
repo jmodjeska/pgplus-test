@@ -69,9 +69,9 @@ cocktail list: |
     bees knees, bijou, gimlet, martinez, b and b, milk and honey,
     derby cocktail, gypsy queen, bobby burns, vieux carre,
     chrysanthemum, shaken drake, adriatique, twentieth century,
-    irish coffee, margarita, enzoni
+    irish coffee, margarita, enzoni, paper plane
 
-    There are 72 recipes available.
+    There are 73 recipes available.
 
     ===========================================================================
 
@@ -218,11 +218,21 @@ commands all: |
     ===========================================================================
 
 version:
-    - Running UberWorld modifications v5.7.3.
+    - Running UberWorld modifications v5.7.4.
     - Shorter Links v0.2 (by Raindog) installed.
 
 # Other stubs (stub name matches the test name in test-plan.yaml)
 # These are grouped by section for convenience
+
+lsu: |
+    ============================== UberSuperUsers =============================
+
+    Name               Rank               Location         Idle
+    goat               UberAdmin          [deathstar ]     00:00:00:00
+    Warden             UberRobot          teleporter       00:00:00:00
+
+    1 superuser(s) - 1 on and 0 off lsu (active su: goat)
+    ===========================================================================
 
 check_known_admin_profile: |
     Total login time    : 4036 days, 37 mins and 37 secs.
@@ -254,6 +264,7 @@ file_manifest:
     - '/home/uber/uberworld/files/banish'
     - '/home/uber/uberworld/files/banish.msg'
     - '/home/uber/uberworld/files/banned.msg'
+    - '/home/uber/uberworld/files/cocktails'
     - '/home/uber/uberworld/files/full.msg'
     - '/home/uber/uberworld/files/nonew.msg'
     - '/home/uber/uberworld/files/socials'

@@ -153,6 +153,25 @@ module Tests
 
   # ADMIN & FILESYSTEM TESTS
 
+  def lsu(h)
+    # Run as admin to ensure an admin is on
+    return check_stub('lsu')[1] unless check_stub('lsu')[0]
+    stub = STUBS['lsu']
+    out = clean(h.send("lsu"))
+    expects = {}
+    [0, 2, 3, 6].each do |l|
+      if clean(stub.lines[l]) == clean(out.lines[l])
+        expects["row #{l} matches"] = true
+      else
+        expects["row #{l} matches"] =
+          "\nexpected: " + clean(stub.lines[l]) +
+          "\nactual:   " + clean(out.lines[l])
+      end
+    end
+    passfail = expects.values.all? { |x| x == true }
+    return [:results, passfail, "all true", output_hash(expects)]
+  end
+
   def backup_complete(h)
     return check_stub('backup')[1] unless check_stub('backup')[0]
     expected = STUBS['backup'].lines.last.strip
