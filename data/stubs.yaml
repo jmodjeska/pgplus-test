@@ -228,7 +228,7 @@ lsu: |
     ============================== UberSuperUsers =============================
 
     Name               Role               Location         Idle
-    goat               UberAdmin          [deathstar ]     00:00:00:00
+    goat               UberAdmin          deathstar        00:00:00:00
     Warden             UberRobot          teleporter       00:00:00:00
 
     1 superuser(s) - 1 on and 0 off lsu (active su: goat)
