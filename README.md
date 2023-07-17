@@ -201,4 +201,5 @@ Who knows how much time I'll have for this project, but some nice-to-have future
 * [ChatGPT Bot for PG+](https://github.com/jmodjeska/pgplus-aiyu)
 * [Short Link Generator for PG+ Talkers](https://github.com/jmodjeska/pgplus_shortlink)
 * [PG+ Cocktail Recipe](https://github.com/jmodjeska/pgplus-cocktail)
+* [PG+ Threading](https://github.com/jmodjeska/pgplus-threads)
 
